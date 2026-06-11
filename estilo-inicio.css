@@ -1,0 +1,152 @@
+/* ============================================
+   Estilos específicos de la página de Inicio
+============================================ */
+
+body {
+    background-image: url("img/fondo-jbc.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 50px;
+    padding: 70px 8%;
+    align-items: center;
+}
+
+.hero-eyebrow {
+    color: var(--rojo-vino);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.hero-text h1 {
+    font-size: 3.2rem;
+    line-height: 1.15;
+    margin: 10px 0 6px;
+}
+
+.hero-cita-ref {
+    color: var(--azul-claro);
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.hero-text p {
+    color: var(--texto-suave);
+    margin-bottom: 28px;
+    font-size: 1.05rem;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(44, 74, 124, 0.18);
+}
+
+/* GRID DE TARJETAS "LO QUE HACEMOS" */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(44, 74, 124, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(139, 30, 63, 0.15);
+}
+
+.card-icono {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: var(--azul-cana);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+/* SECCIÓN DESTACADA */
+.destacado {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.destacado-img img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.destacado-texto h2 {
+    margin: 8px 0 14px;
+}
+
+.destacado-texto p {
+    color: var(--texto-suave);
+    margin-bottom: 26px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+    .hero { grid-template-columns: 1fr; text-align: center; }
+    .hero-botones { justify-content: center; }
+    .hero-img img { height: 320px; }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .destacado { grid-template-columns: 1fr; }
+    .destacado-img img { height: 280px; }
+}
+
+@media (max-width: 768px) {
+    .hero { padding: 40px 5%; }
+    .hero-text h1 { font-size: 2.2rem; }
+    body { background-attachment: scroll; }
+}
+
+@media (max-width: 480px) {
+    .grid { grid-template-columns: 1fr; }
+    .hero-text h1 { font-size: 1.8rem; }
+}
